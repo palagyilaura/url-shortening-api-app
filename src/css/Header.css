@@ -1,0 +1,114 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 60px auto 30px auto;
+  width: 80%;
+}
+.nav-links,
+.login,
+.links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.links {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-links li,
+.login li {
+  list-style: none;
+}
+.logo-header {
+  display: flex;
+  align-items: center;
+}
+.responsive-nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.nav-links {
+  margin-left: 30px;
+}
+.login li {
+  margin-left: 30px;
+}
+.signup {
+  padding: 10px 25px;
+
+  border-radius: 50px;
+  background: var(--primary-color);
+  cursor: pointer;
+}
+.signup:hover {
+  background: #95e9e9;
+}
+.nav-links li a,
+.login li a {
+  font-weight: 700;
+  color: var(--grayish-violet);
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.nav-links li a:hover,
+.login li a:hover {
+  color: var(--footer);
+}
+li a {
+  text-decoration: none;
+}
+.signup a {
+  color: white !important;
+}
+.nav-toggle {
+  display: none;
+}
+@media only screen and (max-width: 768px) {
+  .responsive-nav {
+    display: none;
+  }
+  .nav-toggle {
+    display: block;
+    cursor: pointer;
+  }
+  .responsive-nav.unfold {
+    display: block;
+    width: 80%;
+    background: var(--violet);
+    position: absolute;
+    top: 123px;
+    border-radius: 10px;
+    z-index: 2;
+    padding: 30px 0;
+  }
+  .nav-links,
+  .login {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+  .login li {
+    margin: 0;
+  }
+  .nav-links li,
+  .login li {
+    width: 80%;
+    text-align: center;
+    padding: 10px 0;
+  }
+  .login li {
+    border-top: 1px solid var(--grey);
+  }
+  .login li:first-child {
+    margin-top: 10px;
+    padding: 20px 0;
+  }
+  .nav-links li a,
+  .login li a {
+    color: white;
+  }
+}

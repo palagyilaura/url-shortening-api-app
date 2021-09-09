@@ -1,0 +1,146 @@
+.urlShortener {
+  position: relative;
+}
+.container {
+  background: var(--violet);
+  margin: 0 auto;
+  width: 80%;
+  padding: 50px;
+
+  background-image: url("../images/bg-shorten-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+  position: relative;
+  top: 77px;
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.form {
+  display: grid;
+  grid-template-columns: 83% 15%;
+  grid-column-gap: 2%;
+}
+input {
+  padding: 15px 25px;
+  font-size: 18px;
+  border-radius: 10px;
+  border: none;
+}
+input:focus {
+  border: 2px solid var(--primary-color);
+  outline: none;
+}
+.shorten-btn {
+  padding: 15px 25px;
+  color: white !important;
+  border-radius: 10px;
+  background: var(--primary-color);
+  outline: none;
+  border: none;
+  font-size: 18px;
+}
+.short-link {
+  position: relative;
+  top: 100px;
+  margin: 0 auto;
+  width: 80%;
+}
+.short-link li {
+  list-style: none;
+  background: white;
+  padding: 15px 25px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+}
+.short {
+  color: var(--primary-color);
+}
+.error {
+  color: var(--red);
+  padding-top: 10px;
+  position: absolute;
+  top: 110px;
+  display: none;
+}
+.error-input,
+.error-input:focus {
+  border: 2px solid #f46262;
+}
+.error-input::placeholder {
+  color: #f46262;
+  opacity: 0.5;
+}
+.copy-btn {
+  padding: 10px 0;
+  width: 120px;
+  color: white !important;
+  border-radius: 5px;
+  background: var(--primary-color);
+  outline: none;
+  border: none;
+  font-size: 16px;
+}
+.copy-btn:hover,
+.shorten-btn:hover {
+  background: #95e9e9;
+}
+.short-copy {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.short-copy p {
+  padding-right: 30px;
+}
+@media only screen and (max-width: 375px) {
+  .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+  .container {
+    padding: 25px;
+    height: 200px;
+  }
+  .error {
+    padding: 0;
+    top: 85px;
+  }
+  input,
+  .shorten-btn {
+    border-radius: 5px;
+  }
+
+  .short-link li {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+  .short-copy {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 100%;
+  }
+  .short-copy p {
+    padding-bottom: 15px;
+  }
+  .copy-btn {
+    width: 100%;
+  }
+  .url {
+    width: 100%;
+    word-wrap: break-word;
+    border-bottom: 1px solid var(--grey);
+    padding: 20px;
+  }
+}
