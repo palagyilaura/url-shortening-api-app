@@ -67,7 +67,7 @@ li a {
 .nav-toggle {
   display: none;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 880px) {
   .responsive-nav {
     display: none;
   }
@@ -110,5 +110,10 @@ li a {
   .nav-links li a,
   .login li a {
     color: white;
+  }
+}
+@media only screen and (max-width: 980px) {
+  .login li a {
+    padding: 0;
   }
 }

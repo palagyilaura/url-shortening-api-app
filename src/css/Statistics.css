@@ -8,16 +8,13 @@
   width: 80%;
 }
 .cards {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   margin-top: 100px;
 }
 .card {
   background: white;
   padding: 30px;
   border-radius: 5px;
-  height: 270px;
+  height: auto;
   width: 360px;
   position: relative;
   z-index: 1;
@@ -73,7 +70,7 @@
   width: 40%;
   margin: 0 auto;
 }
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 500px) {
   .cards {
     display: flex;
     flex-direction: column;
@@ -107,5 +104,65 @@
     left: 50%;
     right: 50%;
     top: -400px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .cards {
+    display: flex;
+    flex-direction: column;
+    /*height: 900px;*/
+  }
+  /*.card {
+    width: 100%;
+  }*/
+
+  .card {
+    width: 100%;
+  }
+  .statistics {
+    height: 100%;
+    padding-bottom: 100px;
+    padding-top: 50px;
+  }
+  .title-text {
+    width: 100%;
+  }
+  .statistics-title {
+    font-size: 28px;
+  }
+  .circle {
+    top: 0;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .line {
+    height: 8px;
+    transform: translate(-50%, -50%) rotate(90deg);
+    width: 700px;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    top: -300px;
+  }
+}
+/*@media only screen and (min-width: 801px) {
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 30px;
+  }
+  .card {
+    width: 100%;
+  }
+}*/
+@media only screen and (min-width: 1025px) {
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 30px;
+  }
+  .card {
+    width: 100%;
   }
 }

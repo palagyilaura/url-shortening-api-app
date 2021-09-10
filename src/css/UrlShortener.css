@@ -99,7 +99,7 @@ input:focus {
 .short-copy p {
   padding-right: 30px;
 }
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 768px) {
   .form {
     display: flex;
     flex-direction: column;
@@ -142,5 +142,26 @@ input:focus {
     word-wrap: break-word;
     border-bottom: 1px solid var(--grey);
     padding: 20px;
+  }
+}
+@media only screen and (min-width: 769px) {
+  .container {
+    padding: 20px;
+    height: 160px;
+  }
+  .form {
+    display: grid;
+    grid-template-columns: 73% 25%;
+    grid-column-gap: 2%;
+  }
+}
+@media only screen and (min-width: 1250px) {
+  .form {
+    display: grid;
+    grid-template-columns: 83% 15%;
+    grid-column-gap: 2%;
+  }
+  .container {
+    padding: 25px;
   }
 }

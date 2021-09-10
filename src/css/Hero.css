@@ -37,10 +37,9 @@ button:hover {
   overflow: hidden;
 }
 .text-content {
-  width: 50%;
-  margin-left: 144px;
+  margin-left: 10%;
 }
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 500px) {
   .hero {
     height: 100%;
     overflow: hidden;
@@ -69,5 +68,35 @@ button:hover {
   .text {
     width: 100%;
     padding-top: 10px;
+  }
+}
+@media only screen and (max-width: 950px) {
+  .hero {
+    height: 100%;
+    overflow: hidden;
+  }
+  .text-content {
+    width: 80%;
+    text-align: center;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .hero-text {
+    line-height: 45px;
+    font-size: 40px;
+  }
+  .hero .content {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .hero-bg img {
+    position: relative;
+    width: 100%;
+    left: 80px;
+  }
+  .hero-bg {
+    overflow: initial;
   }
 }
