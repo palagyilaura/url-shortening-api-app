@@ -26,11 +26,9 @@ function UrlShortener() {
   };
 
   const handleClick = () => {
-    console.log(value);
+
     if (value === "") {
-      console.log("url empty");
       setEmpty(true);
-      setUrl("");
     }
     else if (validURL(value) === true) {
       setCopy(false);
@@ -44,16 +42,8 @@ function UrlShortener() {
           setShortLink(string.replaceAll('"', ""));
           setLoader(false);
           setUrl(value);
-          //setValue("");
         })
-        /*.catch((error) => {
-          setLoader(false);
-          setNotError(false);
-          setUrl(value);
-          console.log(error)
-        })*/;
-      //setValue("");
-      //setUrl("");
+      setValue("");
     }
     else {
       setError(true);
@@ -62,22 +52,18 @@ function UrlShortener() {
       setValue("");
       setEmpty(false);
     }
-    //setUrl("");
   };
-  console.log("error", error);
+
   const handleChange = (e) => {
     setValue(e.target.value);
   };
-  //console.log("value:", value);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    //console.log("submit:", url, shortLink);
     e.target.reset();
   };
 
   const handleCopy = () => {
-    console.log("copied");
     navigator.clipboard.writeText(shortLink);
     setCopy(true);
   };
@@ -89,9 +75,8 @@ function UrlShortener() {
           <input
             type="text"
             placeholder="Shorten a link here..."
-            className={empty === true ? "error-input" : ""}
+            className={empty === true || error === true ? "error-input" : ""}
             onChange={handleChange}
-          /*value={value}*/
           />
 
           <button className="shorten-btn" onClick={handleClick} type="submit">
@@ -105,12 +90,12 @@ function UrlShortener() {
           <i>Please add a link</i>
         </p>
         <p className="error"
-          style={{ display: error === true && empty === false ? "block" : "none" }}><i>Error in url: {url}</i></p>
+          style={{ display: error === true && empty === false ? "block" : "none" }}><i>Error in url</i></p>
       </div>
       <ul className="short-link">
         {loader ? (<li>Loading...</li>) :
           error === undefined || error === true ?
-            console.log("hiba!") :
+            null :
             (
               <li>
                 <div className="url">{url}</div>
@@ -128,8 +113,6 @@ function UrlShortener() {
                 </div>
               </li>
             )
-          /*:
-          console.log("üres")*/
         }
       </ul>
     </div>

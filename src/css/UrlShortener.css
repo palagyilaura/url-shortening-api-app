@@ -53,8 +53,6 @@ input:focus {
   background: white;
   padding: 15px 25px;
   border-radius: 5px;
-  display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   font-size: 18px;
@@ -79,7 +77,7 @@ input:focus {
 }
 .copy-btn {
   padding: 10px 0;
-  width: 120px;
+
   color: white !important;
   border-radius: 5px;
   background: var(--primary-color);
@@ -91,11 +89,7 @@ input:focus {
 .shorten-btn:hover {
   background: #95e9e9;
 }
-.short-copy {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
+
 .short-copy p {
   padding-right: 30px;
 }
@@ -154,6 +148,30 @@ input:focus {
     grid-template-columns: 73% 25%;
     grid-column-gap: 2%;
   }
+  .short-link li {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+  .short-copy {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 100%;
+  }
+  .short-copy p {
+    padding-bottom: 15px;
+  }
+  .copy-btn {
+    width: 100%;
+  }
+  .url {
+    width: 100%;
+    word-wrap: break-word;
+    border-bottom: 1px solid var(--grey);
+    padding: 20px;
+  }
 }
 @media only screen and (min-width: 1250px) {
   .form {
@@ -163,5 +181,27 @@ input:focus {
   }
   .container {
     padding: 25px;
+  }
+  .short-link li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .short-copy {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: auto;
+  }
+  .url {
+    border: none;
+  }
+  .short-copy p {
+    padding-right: 30px;
+    padding-bottom: 0;
+  }
+  .copy-btn {
+    width: 120px;
   }
 }

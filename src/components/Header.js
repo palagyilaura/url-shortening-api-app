@@ -41,7 +41,7 @@ function Header() {
       </ul>
 
       <li className="nav-toggle" onClick={handleClick}>
-        <a href="#">
+        <a href="/#">
           <img src={Menu} alt="mobile menu" />
         </a>
       </li>
